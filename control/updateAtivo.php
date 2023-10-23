@@ -9,6 +9,7 @@ $valor    =$_POST["txtvalorUp"    ];
 $status    =$_POST["txtstatusUp"    ];
 $categoria     =$_POST["txtcategoriaUp"    ];
 $marca    =$_POST["txtmarcaUp"    ];
+$espec    =$_POST["txtespecUp"    ];
 $unidade    =$_POST["txtunidadeUp"    ];
 $setor     =$_POST["txtsetorUp"    ]; 
 $setoranterior     =$_POST["txtsetoranteriorUp"    ];
@@ -18,7 +19,7 @@ if($patrimonio != "" && $identificacao !=""){
 try{
 
 
-		mysqli_query($conexao,"UPDATE `ATIVO` SET `cd_patrimonio` = '$patrimonio', `ds_identificacao` = '$identificacao', `dt_cadastro` = '$cadastro', `dt_aquisicao` = '$aquisicao', `cd_notafiscal` = '$nf', `ds_valor` ='$valor', `ds_situacao` = '$status',`ds_categoria`='$categoria', `cd_marca`='$marca', `ds_unidade`='$unidade', `ds_setor`= '$setor', `ds_setoranterior`= '$setoranterior', `ds_observacoes`= '$obs' WHERE `cd_patrimonio`='$patrimonio'");
+		mysqli_query($conexao,"UPDATE `ATIVO` SET `cd_patrimonio` = '$patrimonio', `ds_identificacao` = '$identificacao', `dt_cadastro` = '$cadastro', `dt_aquisicao` = '$aquisicao', `cd_notafiscal` = '$nf', `ds_valor` ='$valor', `ds_situacao` = '$status',`ds_categoria`='$categoria', `cd_marca`='$marca', `cd_espec`='$espec', `ds_unidade`='$unidade', `ds_setor`= '$setor', `ds_setoranterior`= '$setoranterior', `ds_observacoes`= '$obs' WHERE `cd_patrimonio`='$patrimonio'");
 		print "sucesso";
 
 		

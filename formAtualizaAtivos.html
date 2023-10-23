@@ -92,6 +92,9 @@
   <div class="col-xs-8">
     <input class="form-control" type="text"  placeholder="Marca" id="txtmarcaUp" name="txtmarcaUp"required>
   </div>
+  <div class="col-xs-8">
+    <textarea class="form-control" rows="10"  placeholder="Especificações" id="txtespecUp"name="txtespecUp"></textarea>
+  </div>
 </div>
 <div class="form-group row">
    <div class="col-xs-2">
@@ -172,10 +175,11 @@
 	document.getElementById("txtstatusUp").value = response[6];
 	document.getElementById("txtcategoriaUp").value = response[7];
 	document.getElementById("txtmarcaUp").value = response[8];
-	document.getElementById("txtunidadeUp").value = response[9];
-	document.getElementById("txtsetorUp").value = response[10];
-	document.getElementById("txtsetoranteriorUp").value = response[11];
-	document.getElementById("txtobsUp").value = response[12];	
+	document.getElementById("txtespecUp").value = response[9];
+	document.getElementById("txtunidadeUp").value = response[10];
+	document.getElementById("txtsetorUp").value = response[11];
+	document.getElementById("txtsetoranteriorUp").value = response[12];
+	document.getElementById("txtobsUp").value = response[13];	
 	
 	document.getElementById("boxUpdate").style.visibility = "visible";
 	}
@@ -186,8 +190,8 @@
 });
 </script>
 <script type="text/javascript">
-function ajax3(txtpatrimonioUp,txtidentificacaoUp,dtcadastroUp,dtaquisicaoUp,txtnfUp,txtvalorUp,txtstatusUp,txtcategoriaUp,txtmarcaUp,txtunidadeUp,txtsetorUp,txtsetoranteriorUp,txtobsUp){
-	info = {"txtpatrimonioUp":txtpatrimonioUp,"txtidentificacaoUp":txtidentificacaoUp,"dtcadastroUp":dtcadastroUp,"dtaquisicaoUp":dtaquisicaoUp,"txtnfUp":txtnfUp,"txtvalorUp":txtvalorUp,"txtstatusUp":txtstatusUp,"txtcategoriaUp":txtcategoriaUp,"txtmarcaUp":txtmarcaUp,"txtunidadeUp":txtunidadeUp,"txtsetorUp":txtsetorUp,"txtsetoranteriorUp":txtsetoranteriorUp,"txtobsUp":txtobsUp};
+function ajax3(txtpatrimonioUp,txtidentificacaoUp,dtcadastroUp,dtaquisicaoUp,txtnfUp,txtvalorUp,txtstatusUp,txtcategoriaUp,txtmarcaUp,txtespecUp,txtunidadeUp,txtsetorUp,txtsetoranteriorUp,txtobsUp){
+	info = {"txtpatrimonioUp":txtpatrimonioUp,"txtidentificacaoUp":txtidentificacaoUp,"dtcadastroUp":dtcadastroUp,"dtaquisicaoUp":dtaquisicaoUp,"txtnfUp":txtnfUp,"txtvalorUp":txtvalorUp,"txtstatusUp":txtstatusUp,"txtcategoriaUp":txtcategoriaUp,"txtmarcaUp":txtmarcaUp,"txtespecUp":txtespecUp,"txtunidadeUp":txtunidadeUp,"txtsetorUp":txtsetorUp,"txtsetoranteriorUp":txtsetoranteriorUp,"txtobsUp":txtobsUp};
 	
 	$.ajax({
 	type:"post",
@@ -211,12 +215,13 @@ $(document).ready(function(){
 	var txtstatusUp = $("select[name=txtstatusUp]").val();
 	var txtcategoriaUp = $("select[name=txtcategoriaUp]").val();
 	var txtmarcaUp = $("input[name=txtmarcaUp]").val();
+	var txtespecUp = $("textarea[name=txtespecUp]").val();
 	var txtunidadeUp = $("select[name=txtunidadeUp]").val();
 	var txtsetorUp = $("select[name=txtsetorUp]").val();
 	var txtsetoranteriorUp = $("select[name=txtsetoranteriorUp]").val();
 	var txtobsUp = $("textarea[name=txtobsUp]").val();
 	
-	ajax3(txtpatrimonioUp,txtidentificacaoUp,dtcadastroUp,dtaquisicaoUp,txtnfUp,txtvalorUp,txtstatusUp,txtcategoriaUp,txtmarcaUp,txtunidadeUp,txtsetorUp,txtsetoranteriorUp,txtobsUp);
+	ajax3(txtpatrimonioUp,txtidentificacaoUp,dtcadastroUp,dtaquisicaoUp,txtnfUp,txtvalorUp,txtstatusUp,txtcategoriaUp,txtmarcaUp,txtespecUp,GITtxtunidadeUp,txtsetorUp,txtsetoranteriorUp,txtobsUp);
 
 	});	
 });
@@ -234,6 +239,7 @@ function printContent(el){
 	"estado de conservação :"+document.getElementById("txtstatusUp").value+"<br/>"+ 
 	"Categoria :"+document.getElementById("txtcategoriaUp").value+"<br/>"+ 
 	"Marca :"+document.getElementById("txtmarcaUp").value+"<br/>"+ 
+	"Especificações :"+document.getElementById("txtespecUp").value+"<br/>"+ 
 	"Unidade :"+document.getElementById("txtunidadeUp").value+"<br/>"+ 
 	"Setor :"+document.getElementById("txtsetorUp").value+"<br/>"+ 
 	"Setor Anterior :"+document.getElementById("txtsetoranteriorUp").value+"<br/>"+ 

@@ -14,11 +14,12 @@
 	$status =$row["ds_situacao"];
 	$cat =$row["ds_categoria"];
 	$marca =$row["cd_marca"];
+	$espec =$row["cd_espec"];
 	$unidade =$row["ds_unidade"];
 	$setor =$row["ds_setor"];
 	$setorAnt =$row["ds_setoranterior"];
 	$obs =$row["ds_observacoes"];
-	$array = array("$patrimonio","$identificacao","$dtcad","$dtaqui","$nf","$val","$status","$cat","$marca","$unidade","$setor","$setorAnt","$obs");
+	$array = array("$patrimonio","$identificacao","$dtcad","$dtaqui","$nf","$val","$status","$cat","$marca","$espec","$unidade","$setor","$setorAnt","$obs");
 	echo json_encode(array_values($array));	
 	
   ?>

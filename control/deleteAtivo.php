@@ -10,5 +10,5 @@ if (isset($_POST['nome'])) {
     print "sucesso";
 } else {
     //erro e script para voltar ao index
-    print"ERRO DURANTE EXCLUS√O";
+    print"ERRO DURANTE EXCLUS√ÉO";
 }
