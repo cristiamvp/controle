@@ -30,6 +30,7 @@ mysqli_query($conexao, 'CREATE TABLE IF NOT EXISTS `ATIVO` (
  `ds_situacao` varchar(20) NOT NULL,
  `ds_categoria` varchar(20) NOT NULL,
  `cd_marca` varchar(20),
+ `cd_espec` text,
  `ds_unidade` varchar(20) NOT NULL,
  `ds_setor` varchar(20) NOT NULL,
  `ds_setoranterior` varchar(20) NOT NULL,
