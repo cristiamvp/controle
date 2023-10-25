@@ -6,7 +6,7 @@ $reso = mysqli_query($conexao, "select * from ATIVO");
 $eco ="USE `BANCO`;
 ";
 	while($row = mysqli_fetch_array($reso)){  
-	$eco = $eco."INSERT INTO `ATIVO` (`cd_patrimonio`, `ds_identificacao`, `dt_cadastro`, `dt_aquisicao`, `cd_notafiscal`, `ds_valor`, `ds_situacao`, `ds_categoria`, `cd_marca`, `ds_unidade`, `ds_setor`, `ds_setoranterior`, `ds_observacoes`)
+	$eco = $eco."INSERT INTO `ATIVO` (`cd_patrimonio`, `ds_identificacao`, `dt_cadastro`, `dt_aquisicao`, `cd_notafiscal`, `ds_valor`, `ds_situacao`, `ds_categoria`, `cd_marca`, `cd_espec`, `ds_unidade`, `ds_setor`, `ds_setoranterior`, `ds_observacoes`)
 	VALUES(	
   '".$row['cd_patrimonio']."',
   '".$row['ds_identificacao']."',

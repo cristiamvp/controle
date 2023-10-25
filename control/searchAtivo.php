@@ -80,6 +80,11 @@ if($_POST['cbmarca']== 'true')
     $eco=$eco."<th>Marca</th>";
     
 }
+if($_POST['cbespec']== 'true')
+{
+    $eco=$eco."<th>Espec</th>";
+    
+}
 if($_POST['cbcategoria']== 'true')
 {
     $eco=$eco."<th>Categoria</th>";
@@ -135,6 +140,11 @@ if($_POST['cbsituacao']== 'true')
 if($_POST['cbmarca']== 'true')
 {
     $eco=$eco."<td>".$row['cd_marca']."</td>";
+    
+}
+if($_POST['cbespec']== 'true')
+{
+    $eco=$eco."<td>".$row['cd_espec']."</td>";
     
 }
 if($_POST['cbcategoria']== 'true')

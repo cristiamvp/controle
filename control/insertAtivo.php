@@ -21,8 +21,10 @@ if($patrimonio != "" && $identificacao !=""){
 try{
 	$rows = mysqli_num_rows(mysqli_query($conexao,"SELECT * FROM ATIVO WHERE `cd_patrimonio` = '$patrimonio'"));
 		if($rows == 0){
-		mysqli_query($conexao,"INSERT INTO `ATIVO` (`cd_patrimonio`, `ds_identificacao`, `dt_cadastro`, `dt_aquisicao`, `cd_notafiscal`, `ds_valor`, `ds_situacao`, `ds_categoria`, `cd_marca`, `cd_espec`,`ds_unidade`, `ds_setor`, `ds_setoranterior`, `ds_observacoes`)VALUES('$patrimonio', '$identificacao', '$cadastro', '$aquisicao', '$nf', '$valor', '$status', '$categoria', '$marca', '$espec','$unidade', '$setor', '$setoranterior', '$obs')");
+		mysqli_query($conexao,"INSERT INTO `ATIVO` (`cd_patrimonio`, `ds_identificacao`, `dt_cadastro`, `dt_aquisicao`, `cd_notafiscal`, `ds_valor`, `ds_situacao`, `ds_categoria`, `cd_marca`, `cd_espec`, `ds_unidade`, `ds_setor`, `ds_setoranterior`, `ds_observacoes`)VALUES('$patrimonio', '$identificacao', '$cadastro', '$aquisicao', '$nf', '$valor', '$status', '$categoria', '$marca', '$espec', '$unidade', '$setor', '$setoranterior', '$obs')");
 		print "sucesso";
+		print $espec;
+	
 		}else{
 			print "Código já cadastrado";
 		}
