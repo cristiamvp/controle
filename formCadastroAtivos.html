@@ -11,12 +11,12 @@
 <form action="POST" id="formAtivo">
 <div class="form-group row">
 <div class="col-xs-8">
- <input type="text" id="txtpatrimonio" name="txtpatrimonio" class="form-control" placeholder="Código de patrimônio" required>
+ <input type="text" id="txtpatrimonio" name="txtpatrimonio" class="form-control" placeholder="Código de patrimônio" >
 </div>
 </div>
 <div class="form-group row">
    <div class="col-xs-8">
-      <input class="form-control" type="text"placeholder="Identificação" name="txtidentificacao"id="txtidentificacao" required>
+      <input class="form-control" type="text"placeholder="Identificação" name="txtidentificacao"id="txtidentificacao" >
   </div>
 </div>
 <div class="form-group row">
@@ -24,7 +24,7 @@
     Data do cadastro
   </div>
   <div class="col-xs-6">
-    <input class="form-control" type="date" id="dtcadastro"name="dtcadastro" required>
+    <input class="form-control" type="date" id="dtcadastro"name="dtcadastro" >
   </div>
 </div>
 <div class="form-group row">
@@ -32,7 +32,7 @@
 	Data de aquisição
   </div>
   <div class="col-xs-6">
-    <input class="form-control" type="date"id="dtaquisicao" name="dtaquisicao" required>
+    <input class="form-control" type="date"id="dtaquisicao" name="dtaquisicao" >
   </div>
 </div>
 <div class="form-group row">
@@ -52,7 +52,7 @@
   Situação
   </div>
   <div class="col-xs-6">
-	<select class="form-control" placeholder="Estado de conservação" id="txtstatus"name="txtstatus" required>
+	<select class="form-control" placeholder="Estado de conservação" id="txtstatus"name="txtstatus" >
   <option value="" selected disabled>Escolha uma opção</option>
   <?php include "options/optionEstado.html"; ?>
 </select>
@@ -63,7 +63,7 @@
   Categoria
   </div>
   <div class="col-xs-6">
-	<select class="form-control" placeholder="Categoria" id="txtcategoria" name="txtcategoria" required>
+	<select class="form-control" placeholder="Categoria" id="txtcategoria" name="txtcategoria" >
 	<option value="" selected disabled>Escolha uma opção</option>
   <?php include "options/optionCategoria.html"; ?>
 </select>
@@ -72,7 +72,7 @@
 <div class="form-group row">
   
   <div class="col-xs-8">
-    <input class="form-control" type="text" rows="5" placeholder="Marca" id="txtmarca" name="txtmarca"required>
+    <input class="form-control" type="text" rows="5" placeholder="Marca" id="txtmarca" name="txtmarca">
   </div>
   
   <div class="col-xs-8">
@@ -86,7 +86,7 @@
   Unidade
   </div>
   <div class="col-xs-6">
-	<select class="form-control" id="txtunidade" name="txtunidade"required>
+	<select class="form-control" id="txtunidade" name="txtunidade">
 	<option value="" selected disabled>Escolha uma opção</option>
   <?php include "options/optionUnidade.html"; ?>
 </select>
@@ -134,7 +134,7 @@
 <script type="text/javascript">
 function ajaxA(txtpatrimonio,txtidentificacao,dtcadastro,dtaquisicao,txtnf,txtvalor,txtstatus,txtcategoria,txtmarca,txtespec,txtunidade,txtsetor,txtsetoranterior,txtobs){
 	info = {"txtpatrimonio":txtpatrimonio,"txtidentificacao":txtidentificacao,"dtcadastro":dtcadastro,"dtaquisicao":dtaquisicao,"txtnf":txtnf,"txtvalor":txtvalor,"txtstatus":txtstatus,"txtcategoria":txtcategoria,"txtmarca":txtmarca,"txtespec":txtespec,"txtunidade":txtunidade,"txtsetor":txtsetor,"txtsetoranterior":txtsetoranterior,"txtobs":txtobs};
-	//alert(info);
+	
 	$.ajax({
 	type:"post",
 	url:"control/insertAtivo.php",
@@ -159,8 +159,7 @@ $(document).ready(function(){
 	var txtstatus = $("select[name=txtstatus]").val();
 	var txtcategoria = $("select[name=txtcategoria]").val();
 	var txtmarca = $("input[name=txtmarca]").val();
-  var txtespec = $("input[name=txtespec]").val();
-
+  var txtespec = $("textarea[name=txtespec]").val();
 	var txtunidade = $("select[name=txtunidade]").val();
 	var txtsetor = $("select[name=txtsetor]").val();
 	var txtsetoranterior = $("select[name=txtsetoranterior]").val();
